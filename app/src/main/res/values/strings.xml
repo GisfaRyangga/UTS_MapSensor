@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Sensor Map</string>
+    <string name="normal_map">Normal Map</string>
+    <string name="satelite_map">Satellite Map</string>
+    <string name="terrain_map">Terrain Map</string>
+    <string name="hybrid_map">Hybrid Map</string>
+    <string name="action_language">Language</string>
+    <string name="map">Map</string>
+    <string name="setting">Setting</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="this_penguin">This is a penguin</string>
+</resources>
