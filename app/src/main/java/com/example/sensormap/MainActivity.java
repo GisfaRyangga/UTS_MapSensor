@@ -16,11 +16,10 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private GoogleMap mMap;
-
     BottomNavigationView bottomNavigationView;
 
     MapsFragment mapsFragment = new MapsFragment();
+    CompassFragment compassFragment = new CompassFragment();
     SettingFragment settingFragment = new SettingFragment();
 
     @Override
@@ -38,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.maps:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, mapsFragment).commit();
+                        return true;
+                    case R.id.kompas:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, compassFragment).commit();
                         return true;
                     case R.id.setting:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, settingFragment).commit();

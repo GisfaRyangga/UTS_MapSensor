@@ -2,10 +2,15 @@ package com.example.sensormap;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.hardware.Sensor;
+import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -21,6 +26,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsFragment extends Fragment {
@@ -42,12 +48,42 @@ public class MapsFragment extends Fragment {
         @Override
         public void onMapReady(GoogleMap googleMap) {
             mMap = googleMap;
-//              40.45315232872465, -3.6882974263386012
-//              Add a marker in Sydney and move the camera
-            LatLng Santiago_Bernabeu = new LatLng(40.45315232872465, -3.6882974263386012);
-            mMap.addMarker(new MarkerOptions().position(Santiago_Bernabeu).title("Marker di Estadio Santiago Bernabeu"));
-//              mMap.moveCamera(CameraUpdateFactory.newLatLng(Santiago_Bernabeu));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Santiago_Bernabeu, 15));
+
+            LatLng mrtbk_kamila = new LatLng( -7.749413558773544, 110.39878906934368);
+            mMap.addMarker(new MarkerOptions().position(mrtbk_kamila).title("Marker di Martabak Kamila"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mrtbk_kamila, 15));
+
+            LatLng mrtbk_mrbs = new LatLng( -7.751585309757499, 110.40033053625677);
+            mMap.addMarker(new MarkerOptions().position(mrtbk_mrbs).title("Marker di Martabak Marabasa"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(mrtbk_mrbs));
+
+            LatLng mrtbk_btg = new LatLng( -7.754496870417889, 110.39693449196383);
+            mMap.addMarker(new MarkerOptions().position(mrtbk_btg).title("Marker di Martabak Bintang"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(mrtbk_btg));
+
+            LatLng mrtbk_lbs = new LatLng( -7.75602423844568, 110.39611558766624);
+            mMap.addMarker(new MarkerOptions().position(mrtbk_lbs).title("Marker di Martabak LBS Tegal Bang Roni"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(mrtbk_lbs));
+
+            LatLng mrtbk_csbl = new LatLng( -7.7472206877445196, 110.38688008959456);
+            mMap.addMarker(new MarkerOptions().position(mrtbk_csbl).title("Marker di Martabak Casablanca Jalan Kaliurang"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(mrtbk_csbl));
+
+            LatLng mrtbk_arndr = new LatLng( -7.7471636159663895, 110.38766747327428);
+            mMap.addMarker(new MarkerOptions().position(mrtbk_arndr).title("Marker di Martabak Arindra Kaliurang 1"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(mrtbk_arndr));
+
+            // My location
+            if (ContextCompat.checkSelfPermission(getActivity(),
+                    Manifest.permission.ACCESS_FINE_LOCATION) ==
+                    PackageManager.PERMISSION_GRANTED) {
+                mMap.setMyLocationEnabled(true);
+            }
+            else {
+                ActivityCompat.requestPermissions(getActivity(), new String[]{
+                        Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            }
+            mMap.setMyLocationEnabled(true);
         }
     };
 
@@ -69,5 +105,4 @@ public class MapsFragment extends Fragment {
             mapFragment.getMapAsync(callback);
         }
     }
-
 }

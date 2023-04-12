@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sensor Map</string>
+    <string name="normal_map">Peta Biasa</string>
+    <string name="satelite_map">Peta Satelit</string>
+    <string name="terrain_map">Peta Daerah</string>
+    <string name="hybrid_map">Peta Campuran</string>
+    <string name="action_language">Bahasa</string>
+    <string name="map">Peta</string>
+    <string name="setting">Pengaturan</string>
+    <string name="appwidget_text">CONTOH</string>
+    <string name="add_widget">Tambah Widget</string>
+    <string name="app_widget_description">Ini adalah deskripsi widget aplikasi</string>
+    <string name="this_stadion">Ini Santiago Bernabeu</string>
+    <string name="empty_data">Data kosong</string>
+    <string name="compass">Kompas</string>
+    <string name="hello_blank_fragment">Halo fragmen kosong</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sensor Map</string>
+    <string name="this_stadion">Este es el Santiago Bernabéu</string>
+    <string name="empty_data">Datos vacíos</string>
+    <string name="app_widget_description">Esta es una descripción del widget de la aplicación.</string>
+    <string name="add_widget">Añadir widget</string>
+    <string name="appwidget_text">EJEMPLO</string>
+    <string name="setting">Configuración</string>
+    <string name="map">Mapa</string>
+    <string name="action_language">Idioma</string>
+    <string name="hybrid_map">Mapa híbrido</string>
+    <string name="terrain_map">Mapa del terreno</string>
+    <string name="satelite_map">Mapa satelital</string>
+    <string name="normal_map">Mapa Normal</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="compass">Brújula</string>
+</resources>

@@ -22,14 +22,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/sb" />
+            android:src="@drawable/mrtbk" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/text_stack"
             android:layout_weight="1"
-            android:text="@string/this_penguin"
+            android:text="@string/this_stadion"
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="17dp"
@@ -43,7 +43,7 @@
         android:layout_height="match_parent"
         android:id="@+id/empty_view"
         android:gravity="center"
-        android:text="empty data"
+        android:text="@string/empty_data"
         android:textAlignment="center"
         android:textSize="20dp"
         android:textStyle="bold"
